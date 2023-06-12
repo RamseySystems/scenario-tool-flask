@@ -1,0 +1,40 @@
+{
+    "person demographics": {
+        "person name": {
+            "person_first_name": "Ayra",
+            "person_family_name": "Radakrishnan",
+            "person_preferred_name": "Ayra",
+            "person_full_name": "Miss Ayra Radakrishnan ",
+            "title": "Miss"
+        },
+        "persons address": {
+            "address_line_1": "27 Beacon house",
+            "address_line_2": "Digbeth",
+            "address_line_3": "Birmingham",
+            "post_code": "B5 6DY",
+            "address_type": "1 | Main permanent residence "
+        },
+        "persons contact details": {
+            "preferred_contact_method": "4 | Internet e-Mail Address",
+            "persons_telephone_number_details": {
+                "persons_telephone_number": "0121 496 0000 ",
+                "persons_telephone_number_type": " home | Home",
+                "preference_of_telephone_number": "1"
+            },
+            "persons_email_address_details": {
+                "persons_email_address": "ayra@examplenet ",
+                "persons_email_address_details_type": " home | Home",
+                "preference_of_email_address": "1"
+            }
+        }
+    },
+    "person_demographics": {
+        "date_of_birth": "1994-07-26 00:00:00",
+        "gender": "2 | Female",
+        "ethnicity": "L | Asian or Asian British \u2013 Any other Asian background",
+        "religion": "309687009 |Buddhist, follower of religion (person)|",
+        "sex": "2 | Female",
+        "NHS_number": "012 345 6780",
+        "NHS_number_status_indicator": "01 | Number present and verified"
+    }
+}
