@@ -1,0 +1,52 @@
+{
+    "wound_assessment_and_treatment": {
+        "wound_and_skin_care_treatment": {
+            "wound_care_products": {
+                "medical_devices_entry": {
+                    "medical_device": {
+                        "device_type": [
+                            {
+                                "coded_value": "Full compression bandaging system (40mmHg)"
+                            },
+                            {
+                                "coded_value": "Non adherent contact layer"
+                            }
+                        ]
+                    }
+                }
+            },
+            "procedures_and_therapies": {
+                "procedure_record_entry": {
+                    "procedure": [
+                        {
+                            "free_text": "Leg elevation"
+                        },
+                        {
+                            "free_text": "Gentle exercises to promote circulation"
+                        },
+                        {
+                            "free_text": "Use emollient on surrounding lower-limb"
+                        }
+                    ]
+                }
+            }
+        },
+        "wound_assessment": {
+            "wound_and_surrounding_skin_description": {
+                "wound_bed_tissue_type": "10% Slough, 90% Granulation",
+                "surrounding_skin_condition": "pink"
+            }
+        },
+        "wound_observations": {
+            "clinical_observations": {
+                "exudate": {
+                    "exudate_amount": "Low"
+                },
+                "pain_score": {
+                    "value": "6",
+                    "units_of_measure": "/10"
+                }
+            }
+        }
+    }
+}

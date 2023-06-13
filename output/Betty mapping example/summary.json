@@ -1,0 +1,43 @@
+{
+    "personae": "Betty mapping example",
+    "sheets": [
+        {
+            "sheet_name": "Personal details",
+            "invalid_paths": [],
+            "object_save_path": "/Users/frankiehadwick/Documents/PRSB/Scenario tool/scenario tool/output/website/data/Betty mapping example/json/Personal details.json"
+        },
+        {
+            "sheet_name": "Health information and history",
+            "invalid_paths": [],
+            "object_save_path": "/Users/frankiehadwick/Documents/PRSB/Scenario tool/scenario tool/output/website/data/Betty mapping example/json/Health information and history.json"
+        },
+        {
+            "sheet_name": "Wound assessment Day 9",
+            "invalid_paths": [],
+            "object_save_path": "/Users/frankiehadwick/Documents/PRSB/Scenario tool/scenario tool/output/website/data/Betty mapping example/json/Wound assessment Day 9.json"
+        },
+        {
+            "sheet_name": "Wound treatment plan Day 9",
+            "invalid_paths": [],
+            "object_save_path": "/Users/frankiehadwick/Documents/PRSB/Scenario tool/scenario tool/output/website/data/Betty mapping example/json/Wound treatment plan Day 9.json"
+        },
+        {
+            "sheet_name": "Dressing change Day 10",
+            "invalid_paths": [],
+            "object_save_path": "/Users/frankiehadwick/Documents/PRSB/Scenario tool/scenario tool/output/website/data/Betty mapping example/json/Dressing change Day 10.json"
+        },
+        {
+            "sheet_name": "Care and support plan Day 10",
+            "invalid_paths": [
+                "care_and_support_plan.needs,_concerns_or_problems.goals_and_hopes.actions_and_activities..name",
+                "care_and_support_plan.needs,_concerns_or_problems.goals_and_hopes.actions_and_activities..role"
+            ],
+            "object_save_path": "/Users/frankiehadwick/Documents/PRSB/Scenario tool/scenario tool/output/website/data/Betty mapping example/json/Care and support plan Day 10.json"
+        },
+        {
+            "sheet_name": "Escalation plan Day 10",
+            "invalid_paths": [],
+            "object_save_path": "/Users/frankiehadwick/Documents/PRSB/Scenario tool/scenario tool/output/website/data/Betty mapping example/json/Escalation plan Day 10.json"
+        }
+    ]
+}

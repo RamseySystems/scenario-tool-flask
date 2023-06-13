@@ -1,0 +1,14 @@
+{
+    "problem_list": {
+        "problem_list_record_entry": {
+            "problem": [
+                {
+                    "coded_value": "Leg ulcer"
+                },
+                {
+                    "coded_value": "BMI 30"
+                }
+            ]
+        }
+    }
+}

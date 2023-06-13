@@ -84,16 +84,49 @@
             </tr>
         </thead>
         <tbody>
-            {% for item in data %} {% if item.sheet is not none %}
-            <tr data-file="./data/{{ name }}/rendered/{{ item.sheet }}.html">
-                {% else %}
+             
                 <tr>
-                    {% endif %}
-                    <td>{{ item.time }}</td>
-                    <td>{{ item.event }}</td>
+                    
+                    <td>09:00</td>
+                    <td>Wakes up</td>
                 </tr>
 
-                {% endfor %}
+                 
+            <tr data-file="./data/Betty mapping example/rendered/Health information and history.html">
+                
+                    <td>10:00</td>
+                    <td>Eats breakfast</td>
+                </tr>
+
+                 
+                <tr>
+                    
+                    <td>10:45</td>
+                    <td>Goes for a run</td>
+                </tr>
+
+                 
+                <tr>
+                    
+                    <td>13:00</td>
+                    <td>Watches TV</td>
+                </tr>
+
+                 
+            <tr data-file="./data/Betty mapping example/rendered/Dressing change Day 10.html">
+                
+                    <td>16:00</td>
+                    <td>Eats some sweets</td>
+                </tr>
+
+                 
+                <tr>
+                    
+                    <td>21:00</td>
+                    <td>Goes to bed</td>
+                </tr>
+
+                
         </tbody>
     </table>
     <h1 id="hidden" style="display: none;">true</h1>

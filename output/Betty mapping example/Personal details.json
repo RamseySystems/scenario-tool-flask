@@ -1,0 +1,10 @@
+{
+    "person_demographics": {
+        "person_name": {
+            "person_full_name": "Betty"
+        },
+        "date_of_birth": "1949",
+        "sex": "Female",
+        "ethnicity": "White British"
+    }
+}

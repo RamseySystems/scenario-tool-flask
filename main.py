@@ -1,7 +1,7 @@
-from flask import Flask, request, render_template, flash, redirect, url_for, send_from_directory
+from flask import Flask, request, render_template, flash, redirect, send_from_directory
 from flask_cors import CORS
+import json
 import os
-from werkzeug.utils import secure_filename
 import functions as fn
 import shutil
 from jinja2 import Environment, FileSystemLoader
@@ -45,14 +45,19 @@ def upload_file():
         for file in files:
             file.save(os.path.join(UPLOAD_FOLDER, file.filename))
 
-        # process files
+        # personae
         personae = []
-        for file in os.listdir(UPLOAD_FOLDER):
-            name = file[:-5]
-            personae.append(name)
-            fn.process_file(file, OUTPUT_FOLDER, UPLOAD_FOLDER, f'{CURRENT_DIR}/standards')
+        for name in os.listdir(UPLOAD_FOLDER):
+            personae.append(name[:-5])
 
-        print(personae)
+        # process files
+        summaries = []
+        for file in os.listdir(UPLOAD_FOLDER):
+            summary = fn.process_file(file, OUTPUT_FOLDER, UPLOAD_FOLDER, f'{CURRENT_DIR}/standards')
+            with open(f'{OUTPUT_FOLDER}/{file[:-5]}/summary.json', 'w') as f:
+                json.dump(summary, f, indent=4)
+
+            summaries.append(summary)
 
         # create dropdown gen
         # render log 
@@ -63,10 +68,19 @@ def upload_file():
         with open(f'{OUTPUT_FOLDER}/website/JS/dropdown-gen.js', 'w') as f:
             f.write(output)
 
+        template = env.get_template('index_template.jinja')
+        output = template.render(personae=personae)
+
+        with open(f'{OUTPUT_FOLDER}/website/index.html', 'w') as f:
+            f.write(output)
+
+
         # zip archive output folder
         shutil.make_archive(f'{ZIP_FOLDER}/output', 'zip', OUTPUT_FOLDER)
 
-    return render_template('file_download.html')
+        fn.create_false_path_excel(OUTPUT_FOLDER, summaries)
+
+    return render_template('file_download.html', summaries = summaries)
 
 
 @app.route('/download', methods=['GET', 'POST'])

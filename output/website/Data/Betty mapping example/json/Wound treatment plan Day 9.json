@@ -1,0 +1,53 @@
+{
+    "wound_assessment_and_treatment": {
+        "wound_assessment": {
+            "structured_assessment": {
+                "structured_assessment_name": {
+                    "free_text": "Once weekly for dressing changes"
+                }
+            }
+        },
+        "wound_and_skin_care_treatment": {
+            "procedures_and_therapies": {
+                "procedure_record_entry": {
+                    "procedure": {
+                        "free_text": "Leg elevation"
+                    }
+                }
+            },
+            "wound_care_products": {
+                "medical_devices_entry": {
+                    "medical_device": {
+                        "device_type": [
+                            {
+                                "coded_value": "Full compression bandaging system (40mmHg)"
+                            },
+                            {
+                                "coded_value": "Non adherent contact layer"
+                            }
+                        ]
+                    }
+                },
+                "medication_item_entry": {
+                    "medication_item_cluster": {
+                        "medication_name": {
+                            "coded_value": "Paracetamol"
+                        },
+                        "quantity_supplied": {
+                            "value": "1",
+                            "units_of_measure": "gram"
+                        },
+                        "medication_prescribed_by": "District nurse"
+                    }
+                }
+            },
+            "medication_item_entry": {
+                "medication_item_cluster": {
+                    "structured_dose_direction_cluster": {
+                        "dose_directions_description": "every 5-6 hours"
+                    }
+                }
+            }
+        }
+    }
+}

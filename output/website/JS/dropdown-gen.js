@@ -1,6 +1,6 @@
 let html = ''
 
-const array = ["Ayra excel"]
+const array = ["Betty mapping example"]
 
 for (const file of array) {
     html += `

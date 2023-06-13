@@ -6,11 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Download</title>
+    <style>
+
+    </style>
 </head>
 
 <body>
-    <h1>Download files</h1>
-    <a href="/download">Download</a>
+    <a href="/download">Download</a> {% for object in summaries %}
+
+    <div class="container">
+        <h1 class="file_path">{{ object.file_path }}</h1>
+        {% for sheet in object.sheets %} {% if sheet.invalid_paths|length != 0 %}
+        <h2 class="sheet_name">{{ sheet.sheet_name }}</h2>
+        {% endif %} {% for path in sheet.invalid_paths %}
+        <p class="path">{{ path }}</p>
+        {% endfor %} {% endfor %} {% endfor %}
+    </div>
 </body>
 
 </html>

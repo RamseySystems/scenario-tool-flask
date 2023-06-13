@@ -7,19 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upload file</title>
     <style>
-
+        body {
+            max-width: 500px;
+            margin: auto;
+        }
+        
+        form {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            -ms-transform: translateY(-30%);
+            transform: translateY(-30%);
+        }
+        
+        form input {
+            font-size: 25px;
+        }
     </style>
 </head>
 
 <body>
-    <h1>Upload new File</h1>
     <form action="/upload" method="POST" enctype="multipart/form-data">
         <input type="file" name="file" multiple />
         <input type="submit" value="Upload">
     </form>
-
-
-    <h2 href="/download">Download</h2>
 </body>
 
 </html>

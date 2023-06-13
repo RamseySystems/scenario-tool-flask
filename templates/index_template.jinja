@@ -137,15 +137,15 @@
             document.getElementById("storyViewer").src = path;
         };
 
-        
-        document.getElementById('Betty mapping example').addEventListener('click', function() {
-            document.getElementById("leftTable").src = "./logs/Betty mapping example_log.html";
-            document.getElementById("name").innerHTML = "Betty mapping example";
+        {% for name in personae %}
+        document.getElementById('{{ name }}').addEventListener('click', function() {
+            document.getElementById("leftTable").src = "./logs/{{ name }}_log.html";
+            document.getElementById("name").innerHTML = "{{ name }}";
             reset();
             document.getElementById("rightData").src = "dataViewFiller.html"
-            story("Betty mapping example_story");
+            story("{{ name }}_story");
         }) 
-        
+        {% endfor %}
 
 
 

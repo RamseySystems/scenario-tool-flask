@@ -1,0 +1,242 @@
+{
+    "care_and_support_plan": {
+        "strengths": {
+            "free_text": "cheerful, patient and determined"
+        },
+        "needs,_concerns_or_problems": [
+            {
+                "free_text": "Maintain social life in village",
+                "goals_and_hopes": [
+                    {
+                        "free_text": "Medication and wound care product management",
+                        "goal_importance_score": "9/10",
+                        "goal_status": "In progress",
+                        "actions_and_activities": [
+                            {
+                                "what": {
+                                    "free_text": "Take walks into the village"
+                                },
+                                "who": {
+                                    "name": "Betty (Patient)"
+                                },
+                                "when": "when possible",
+                                "status": {
+                                    "free_text": "In progress"
+                                },
+                                "confidence": "8/10",
+                                "date_last_updated": "Day 10",
+                                "review_date": "Day 40"
+                            },
+                            {
+                                "what": {
+                                    "free_text": "Explain reason for recent absences"
+                                },
+                                "who": {
+                                    "name": "Betty (Patient)"
+                                },
+                                "when": "as needed",
+                                "status": {
+                                    "free_text": "In progress"
+                                },
+                                "confidence": "5/10",
+                                "date_last_updated": "Day 10",
+                                "review_date": "Day 40"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "free_text": "Improve strength and mobility",
+                "goals_and_hopes": [
+                    {
+                        "free_text": "Improve state of wound",
+                        "goal_importance_score": "10/10",
+                        "goal_status": "In progress",
+                        "actions_and_activities": [
+                            {
+                                "what": {
+                                    "free_text": "Clean wound, and maintain healthy skin to lower limb"
+                                },
+                                "who": {
+                                    "role": "Community nurse"
+                                },
+                                "when": "weekly",
+                                "suggested_strategies": "Use a normal saline solution (salt water) or mild soapy water\u202fSoak the gauze or cloth in the saline solution or soapy water, and gently dab or wipe the skin with it\u00a0Use emollient to moisturise surrounding skin",
+                                "status": {
+                                    "free_text": "In progress"
+                                },
+                                "confidence": "10/10",
+                                "date_last_updated": "Day 10",
+                                "review_date": "Day 40"
+                            }
+                        ]
+                    },
+                    {
+                        "free_text": "medication management",
+                        "goal_importance_score": "9/10",
+                        "goal_status": "In progress",
+                        "actions_and_activities": [
+                            {
+                                "what": {
+                                    "free_text": "Take 1g of paracetamol prescribed"
+                                },
+                                "who": {
+                                    "name": "Betty (Patient)"
+                                },
+                                "when": "every 5-6 hours",
+                                "status": {
+                                    "free_text": "In progress"
+                                },
+                                "confidence": "10/10",
+                                "date_last_updated": "Day 10",
+                                "review_date": "Day 40"
+                            }
+                        ]
+                    },
+                    {
+                        "free_text": "Start daily exercises",
+                        "goal_importance_score": "8/10",
+                        "goal_status": "In progress",
+                        "actions_and_activities": [
+                            {
+                                "what": {
+                                    "free_text": "Take a daily walk"
+                                },
+                                "who": {
+                                    "name": "Betty (Patient)"
+                                },
+                                "when": "every day",
+                                "status": {
+                                    "free_text": "In progress"
+                                },
+                                "confidence": "8/10",
+                                "date_last_updated": "Day 10",
+                                "review_date": "Day 40"
+                            },
+                            {
+                                "what": {
+                                    "free_text": "Have a twice daily full-body stretch"
+                                },
+                                "who": {
+                                    "name": "Betty (Patient)"
+                                },
+                                "when": "each morning and night",
+                                "status": {
+                                    "free_text": "In progress"
+                                },
+                                "confidence": "9/10",
+                                "date_last_updated": "Day 10",
+                                "review_date": "Day 40"
+                            },
+                            {
+                                "what": {
+                                    "free_text": "Begin sets of heel raises"
+                                },
+                                "who": {
+                                    "name": "Betty (Patient)"
+                                },
+                                "when": "every day and when possible",
+                                "suggested_strategies": "Use exercise videos, or partake in exercise with a friend or family member",
+                                "status": {
+                                    "free_text": "In progress"
+                                },
+                                "confidence": "7/10",
+                                "date_last_updated": "Day 10",
+                                "review_date": "Day 40"
+                            },
+                            {
+                                "what": {
+                                    "free_text": "elevate leg"
+                                },
+                                "who": {
+                                    "name": "Betty (Patient)"
+                                },
+                                "when": "every day and when possible",
+                                "status": {
+                                    "free_text": "In progress"
+                                },
+                                "confidence": "9/10",
+                                "date_last_updated": "Day 10",
+                                "review_date": "Day 40"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "free_text": "Manage self-care procedures to prevent reoccurrence of ulcer following healing of wound",
+                "goals_and_hopes": [
+                    {
+                        "free_text": "take preventative measures",
+                        "goal_importance_score": "10/10",
+                        "goal_status": "In progress",
+                        "actions_and_activities": [
+                            {
+                                "what": {
+                                    "free_text": "Wear compression stockings"
+                                },
+                                "who": {
+                                    "name": "Betty (Patient)"
+                                },
+                                "when": "every day, take off before bed",
+                                "suggested_strategies": "Set reminders to take off hosiery and to put back on in the morning",
+                                "status": {
+                                    "free_text": "In progress"
+                                },
+                                "confidence": "10/10",
+                                "date_last_updated": "Day 10",
+                                "review_date": "Day 40"
+                            },
+                            {
+                                "what": {
+                                    "free_text": "Use emollients to maintain proper description of surrounding skin"
+                                },
+                                "who": {
+                                    "name": "Betty (Patient)"
+                                },
+                                "when": "twice daily",
+                                "status": {
+                                    "free_text": "In progress"
+                                },
+                                "confidence": "10/10",
+                                "date_last_updated": "Day 10",
+                                "review_date": "Day 40"
+                            },
+                            {
+                                "what": {
+                                    "free_text": "continue sets of heel raises"
+                                },
+                                "who": {
+                                    "name": "Betty (Patient)"
+                                },
+                                "when": "every day if possible",
+                                "status": {
+                                    "free_text": "In progress"
+                                },
+                                "confidence": "6/10",
+                                "date_last_updated": "Day 10",
+                                "review_date": "Day 40"
+                            },
+                            {
+                                "what": {
+                                    "free_text": "continue elevating leg"
+                                },
+                                "who": {
+                                    "name": "Betty (Patient)"
+                                },
+                                "when": "every day and when possible",
+                                "status": {
+                                    "free_text": "In progress"
+                                },
+                                "confidence": "9/10",
+                                "date_last_updated": "Day 10",
+                                "review_date": "Day 40"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

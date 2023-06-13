@@ -1,0 +1,49 @@
+{
+    "wound_assessment_and_treatment": {
+        "wound_assessment": {
+            "wound_length,_width_and_depth": {
+                "wound_dimension": {
+                    "dimension_type": [
+                        {
+                            "coded_value": "Wound length"
+                        },
+                        {
+                            "coded_value": "Wound width"
+                        },
+                        {
+                            "coded_value": "Wound depth"
+                        }
+                    ],
+                    "dimension_value": {
+                        "measurement_value": [
+                            "5",
+                            "3",
+                            "02"
+                        ],
+                        "units_of_measure": [
+                            "cm",
+                            "cm",
+                            "cm"
+                        ]
+                    }
+                }
+            },
+            "wound_and_surrounding_skin_description": {
+                "wound_bed_tissue_type": "10% Slough, 90% Granulation",
+                "surrounding_skin_condition": "pink"
+            }
+        },
+        "wound_observations": {
+            "clinical_observations": {
+                "exudate": {
+                    "exudate_amount": "Low"
+                },
+                "lower_limb_oedema": "Moderate",
+                "pain_score": {
+                    "value": "6",
+                    "units_of_measure": "/10"
+                }
+            }
+        }
+    }
+}

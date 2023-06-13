@@ -1,9 +1,7 @@
-from shutil import copy
 import openpyxl
 import csv
 import json
 import re
-import copy
 import html
 import os
 from jinja2 import Environment, FileSystemLoader
@@ -41,11 +39,11 @@ def allowed_file(filename: str, allowed_extentions):
 def process_file(file, save_dir, upload_folder, standard_path):
     # check for the type of file
     if file[-4:] == 'json':
-        summary = {file[:-5]: {
+        summary = {
             'file_path': f'{upload_folder}/{file}',
             'reformatted_json': '',
             'json_schema': ''
-        }}
+        }
 
         with open(f'{upload_folder}/{file}', 'r') as f:
             unformatted = json.load(f)
@@ -62,10 +60,10 @@ def process_file(file, save_dir, upload_folder, standard_path):
     elif file[-4:] == 'xlsx':
 
         # add summary info to summary object
-        summary = {file[:-5]: {
-            'file_path': f'{upload_folder}/{file}',
+        summary = {
+            'personae': f'{file[:-5]}',
             'sheets': []
-        }}
+        }
 
         # create save dir for excel workbook
         os.mkdir(f'{save_dir}/{file[:-5]}')
@@ -82,8 +80,8 @@ def process_file(file, save_dir, upload_folder, standard_path):
         # generate paths for standards
         standard_path_lists = []
         for standard in os.listdir(standard_path):
-            standard_path = f'{standard_path}/{standard}'
-            standard_paths = get_standard_paths(standard_path)
+            current_standard_path = f'{standard_path}/{standard}'
+            standard_paths = get_standard_paths(current_standard_path)
             standard_path_lists.append(standard_paths.copy())
 
         # loop over sheets
@@ -114,8 +112,10 @@ def process_file(file, save_dir, upload_folder, standard_path):
                     json.dump(story, f, indent=4)
 
                 template_name = 'story.html'
-                html_save_path = f'{save_dir}/{file[:-5]}/story.html'
+                html_save_path = f'{save_dir}/{file[:-5]}/{file[:-5]}_story.html'
+                render_template(template_name, story, html_save_path)
 
+                html_save_path = f'{save_dir}/website/Stories/{file[:-5]}_story.html'
                 render_template(template_name, story, html_save_path)
 
             elif sheet.title == 'Time Line':
@@ -201,11 +201,13 @@ def process_file(file, save_dir, upload_folder, standard_path):
 
 
                 # add invalid paths to sheet summary
-                summary[file[:-5]]['sheets'].append({
+                summary['sheets'].append({
                     'sheet_name': sheet.title,
                     'invalid_paths': invalid_paths,
                     'object_save_path': file_save_path
                 })
+
+        return summary
 
     else:
         raise TypeError('Not a valid input file type: ' + file)
@@ -920,3 +922,35 @@ def filter(node, implementationGuidance: bool):
             return retVal
         else:
             return None
+
+
+
+
+
+def create_false_path_excel(excel_path: str, summaries: list): 
+    '''
+    A functio that will create and savce an excel documenbt that contains the false paths in an easy toi view way
+
+    :param excel_path: the save path for the excel document
+    :param summaries: the false paths for the personae
+    '''
+
+    for summary in summaries:
+        wb = openpyxl.Workbook()
+        ws = wb.active
+        ws.title = 'Summary'
+
+        for sheet in summary['sheets']:
+            if len(sheet['invalid_paths']) != 0:
+                sheet_name = sheet['sheet_name']
+                for path in sheet['invalid_paths']:
+                    ws.append([sheet_name, path])
+
+
+        wb.save(f'{excel_path}/{summary["personae"]}_false_paths.xlsx')
+
+
+
+
+
+    

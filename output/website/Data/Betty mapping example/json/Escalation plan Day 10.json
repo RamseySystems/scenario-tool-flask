@@ -1,0 +1,26 @@
+{
+    "contingency_plans": {
+        "trigger_factors": [
+            {
+                "free_text": "Pain management not working"
+            },
+            {
+                "free_text": "Wound not healing or improving"
+            },
+            {
+                "free_text": "Cellulitis or signs of infection"
+            }
+        ],
+        "what_should_happen": [
+            {
+                "free_text": "Switch medication to 30/500mg of Co-codamol every 4 hours"
+            },
+            {
+                "free_text": "Vascular Re-referral for review"
+            }
+        ],
+        "who_should_be_contacted": {
+            "role": "District nurse"
+        }
+    }
+}
