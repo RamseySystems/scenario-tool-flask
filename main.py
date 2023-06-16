@@ -7,10 +7,12 @@ import shutil
 from jinja2 import Environment, FileSystemLoader
 
 CURRENT_DIR = os.path.dirname(__file__)
-UPLOAD_FOLDER = f'{CURRENT_DIR}/uploads'
+TMP_DIR = '/tmp'
+
+UPLOAD_FOLDER = f'{TMP_DIR}/uploads'
 ALLOWED_EXTENTIONS = {'json','xlsx'}
-OUTPUT_FOLDER = f'{CURRENT_DIR}/output'
-ZIP_FOLDER = f'{CURRENT_DIR}/downloadables'
+OUTPUT_FOLDER = f'{TMP_DIR}/output'
+ZIP_FOLDER = f'{TMP_DIR}/downloadables'
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -18,14 +20,13 @@ CORS(app)
 
 @app.route('/')
 def main():
-    shutil.rmtree(UPLOAD_FOLDER)
-    os.mkdir(UPLOAD_FOLDER)
-    shutil.rmtree(OUTPUT_FOLDER)
-    os.mkdir(OUTPUT_FOLDER)
-    shutil.rmtree(ZIP_FOLDER)
-    os.mkdir(ZIP_FOLDER)
+    fn.clear_dir(UPLOAD_FOLDER)
+    fn.clear_dir(OUTPUT_FOLDER)
+    fn.clear_dir(ZIP_FOLDER)
     shutil.copytree('data view website contents', f'{OUTPUT_FOLDER}/website', dirs_exist_ok=True)
     return render_template('index.html')
+
+
 
 @app.route('/upload', methods=['POST'])
 def upload_file():
