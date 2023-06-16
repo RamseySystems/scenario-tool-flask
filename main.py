@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, flash, redirect, send_file, send_from_directory
+from flask import Flask, request, render_template, flash, redirect, send_file, url_for
 from flask_cors import CORS
 import json
 import os
@@ -34,7 +34,7 @@ def upload_file():
 
     if request.method == 'POST':
         if 'file' not in request.files:
-            flash('No file part')
+            print('No file part')
             return redirect(request.url)
         
 
@@ -46,6 +46,9 @@ def upload_file():
 
         # save files
         for file in files:
+            if file.filename == '':
+                print('No selected file')
+                return redirect(url_for('main'))
             file.save(os.path.join(UPLOAD_FOLDER, file.filename))
 
         # personae
