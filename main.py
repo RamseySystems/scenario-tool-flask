@@ -20,16 +20,18 @@ CORS(app)
 
 @app.route('/')
 def main():
-    fn.clear_dir(UPLOAD_FOLDER)
-    fn.clear_dir(OUTPUT_FOLDER)
-    fn.clear_dir(ZIP_FOLDER)
-    shutil.copytree('data view website contents', f'{OUTPUT_FOLDER}/website', dirs_exist_ok=True)
+
     return render_template('index.html')
 
 
 
 @app.route('/upload', methods=['POST'])
 def upload_file():
+    fn.clear_dir(UPLOAD_FOLDER)
+    fn.clear_dir(OUTPUT_FOLDER)
+    fn.clear_dir(ZIP_FOLDER)
+    shutil.copytree('data view website contents', f'{OUTPUT_FOLDER}/website', dirs_exist_ok=True)
+    
     if request.method == 'POST':
         if 'file' not in request.files:
             flash('No file part')
