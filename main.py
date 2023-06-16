@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, flash, redirect, send_from_directory
+from flask import Flask, request, render_template, flash, redirect, send_file, send_from_directory
 from flask_cors import CORS
 import json
 import os
@@ -88,7 +88,8 @@ def upload_file():
 
 @app.route('/download', methods=['GET', 'POST'])
 def download():
-    return send_from_directory(directory=ZIP_FOLDER, path=f'{ZIP_FOLDER}/output.zip', filename='output.zip')
+ #   result = send_from_directory(directory=ZIP_FOLDER, path=f'{ZIP_FOLDER}/output.zip', filename='output.zip')
+    return  send_file(f'{ZIP_FOLDER}/output.zip', as_attachment=True)
 
 
 
