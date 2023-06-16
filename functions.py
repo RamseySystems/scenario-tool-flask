@@ -136,8 +136,10 @@ def process_file(file, save_dir, upload_folder, standard_path):
                 template_name = 'story.html'
                 html_save_path = f'{save_dir}/{file[:-5]}/{file[:-5]}_story.html'
                 render_template(template_name, story, html_save_path)
-
-                html_save_path = f'{save_dir}/website/Stories/{file[:-5]}_story.html'
+                story_dir = f'{save_dir}/website/Stories'
+                if not os.path.exists(story_dir):
+                    os.makedirs(story_dir)
+                html_save_path = f'{story_dir}/{file[:-5]}_story.html'
                 render_template(template_name, story, html_save_path)
 
             elif sheet.title == 'Time Line':
@@ -165,8 +167,10 @@ def process_file(file, save_dir, upload_folder, standard_path):
                 env = Environment(loader=FileSystemLoader('templates'))
                 template = env.get_template('log.html')
                 output = template.render(data=time_line, name=file[:-5])
-
-                with open(f'{save_dir}/website/Logs/{file[:-5]}_log.html', 'w') as f:
+                log_dir = f'{save_dir}/website/Logs'
+                if not os.path.exists(log_dir):
+                    os.makedirs(log_dir)
+                with open(f'{log_dir}/{file[:-5]}_log.html', 'w') as f:
                     f.write(output)
 
 
