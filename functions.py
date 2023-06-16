@@ -91,9 +91,9 @@ def process_file(file, save_dir, upload_folder, standard_path):
         os.mkdir(f'{save_dir}/{file[:-5]}')
 
         # create dir in website folder
-        os.mkdir(f'{save_dir}/website/data/{file[:-5]}')
-        os.mkdir(f'{save_dir}/website/data/{file[:-5]}/rendered')
-        os.mkdir(f'{save_dir}/website/data/{file[:-5]}/json')
+        os.mkdir(f'{save_dir}/website/Data/{file[:-5]}')
+        os.mkdir(f'{save_dir}/website/Data/{file[:-5]}/rendered')
+        os.mkdir(f'{save_dir}/website/Data/{file[:-5]}/json')
 
         # load each sheet in file intop iterable
         sheets, group_alias_sheet, path_alias_sheet = open_worksheets(
