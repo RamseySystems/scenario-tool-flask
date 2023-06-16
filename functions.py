@@ -213,10 +213,10 @@ def process_file(file, save_dir, upload_folder, standard_path):
                 render_template(template_name, object, html_save_path)
 
                 # save the files to website folder
-                html_save_path = f'{save_dir}/website/data/{file[:-5]}/rendered/{sheet.title}.html'
+                html_save_path = f'{save_dir}/website/Data/{file[:-5]}/rendered/{sheet.title}.html'
                 render_template(template_name, object, html_save_path)
 
-                file_save_path = f'{save_dir}/website/data/{file[:-5]}/json/{sheet.title}.json'
+                file_save_path = f'{save_dir}/website/Data/{file[:-5]}/json/{sheet.title}.json'
                 with open(file_save_path, "w") as f:
                     json.dump(object, f, indent=4)
 
